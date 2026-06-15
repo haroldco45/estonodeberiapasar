@@ -1,0 +1,26 @@
+{
+  "name": "Colombia Sin Venda - Línea de Tiempo de Impacto",
+  "short_name": "Esto No Debería Pasar",
+  "description": "Cronología de impacto sobre el reclutamiento forzado de menores en Colombia, con cifras oficiales de la Defensoría del Pueblo.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1410",
+  "theme_color": "#0b1f17",
+  "orientation": "portrait",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
