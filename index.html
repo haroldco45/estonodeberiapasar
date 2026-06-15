@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Esto No Debería Pasar | Línea de Tiempo de Impacto</title>
+<meta name="description" content="Cronología de impacto sobre el reclutamiento forzado de menores en Colombia: lo que el video muestra, lo que las cifras oficiales confirman, y lo que está en juego." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Esto No Debería Pasar — Línea de Tiempo de Impacto" />
+<meta property="og:description" content="Un niño en uniforme camuflado no es folclor ni propaganda: es una infracción al derecho internacional humanitario. Conoce la cronología real." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://haroldco45.github.io/colombia-sin-venda/cronologia-impacto/" />
+<meta property="og:image" content="https://haroldco45.github.io/colombia-sin-venda/cronologia-impacto/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Esto No Debería Pasar — Línea de Tiempo de Impacto" />
+<meta name="twitter:description" content="La cronología real detrás del reclutamiento forzado de menores en Colombia." />
+<meta name="twitter:image" content="https://haroldco45.github.io/colombia-sin-venda/cronologia-impacto/og-image.png" />
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#0b1f17" />
+<link rel="apple-touch-icon" href="icon-192.png" />
+
+<style>
+  :root{
+    --bg: #0b1410;
+    --bg2: #142019;
+    --card: #16241c;
+    --line: #2a3b30;
+    --green: #4caf6e;
+    --green-dim: #2e5c3f;
+    --red: #c0392b;
+    --amber: #d4a437;
+    --text: #eef3ee;
+    --text-dim: #9fb3a8;
+    --camo1: #5c6b4f;
+    --camo2: #3f4d35;
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html,body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  body{
+    background-image:
+      radial-gradient(circle at 20% 0%, rgba(76,175,110,0.08), transparent 40%),
+      radial-gradient(circle at 80% 30%, rgba(192,57,43,0.06), transparent 40%);
+  }
+
+  /* HERO */
+  .hero{
+    position: relative;
+    padding: 38px 20px 30px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, #0e1b14 0%, var(--bg) 100%);
+    overflow: hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(135deg, var(--camo1) 0 18px, transparent 18px 36px),
+      repeating-linear-gradient(45deg, var(--camo2) 0 22px, transparent 22px 44px);
+    opacity:0.06;
+    pointer-events:none;
+  }
+  .tag{
+    display:inline-block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--amber);
+    border: 1px solid var(--amber);
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    position:relative;
+  }
+  .hero h1{
+    font-size: 26px;
+    line-height: 1.25;
+    font-weight: 800;
+    margin-bottom: 10px;
+    position:relative;
+  }
+  .hero h1 span{ color: var(--red); }
+  .hero p{
+    font-size: 14px;
+    color: var(--text-dim);
+    max-width: 480px;
+    margin: 0 auto;
+    position:relative;
+  }
+  .clock{
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--green);
+    font-family: 'Courier New', monospace;
+    position:relative;
+  }
+
+  /* SECTION TITLES */
+  .section{
+    padding: 28px 18px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .section h2{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .section h2 .dot{
+    width:10px; height:10px; border-radius:50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    flex-shrink:0;
+  }
+  .section .sub{
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 18px;
+  }
+
+  /* VIDEO CONTEXT CARD */
+  .videocard{
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 6px;
+    border-left: 4px solid var(--red);
+  }
+  .videocard h3{
+    font-size: 14px;
+    color: var(--red);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  .videocard p{
+    font-size: 13.5px;
+    color: var(--text);
+    line-height: 1.55;
+  }
+  .videocard p + p{ margin-top: 8px; }
+
+  /* TIMELINE */
+  .timeline{
+    position: relative;
+    padding-left: 28px;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left: 9px; top: 6px; bottom: 6px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--green) 0%, var(--green-dim) 60%, transparent 100%);
+  }
+  .tl-item{
+    position: relative;
+    padding-bottom: 22px;
+  }
+  .tl-item:last-child{ padding-bottom: 0; }
+  .tl-item::before{
+    content:"";
+    position:absolute;
+    left: -28px; top: 4px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 3px solid var(--green);
+  }
+  .tl-item.danger::before{ border-color: var(--red); }
+  .tl-item.amber::before{ border-color: var(--amber); }
+  .tl-date{
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .tl-item.danger .tl-date{ color: var(--red); }
+  .tl-item.amber .tl-date{ color: var(--amber); }
+  .tl-title{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .tl-body{
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+  .tl-tag{
+    display:inline-block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(76,175,110,0.12);
+    color: var(--green);
+    border-radius: 6px;
+    padding: 2px 8px;
+    margin-top: 6px;
+  }
+  .tl-item.danger .tl-tag{ background: rgba(192,57,43,0.12); color: var(--red); }
+  .tl-item.amber .tl-tag{ background: rgba(212,164,55,0.12); color: var(--amber); }
+
+  /* STATS GRID */
+  .stats{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 18px 0;
+  }
+  .stat{
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 12px;
+    text-align:center;
+  }
+  .stat .num{
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--red);
+    line-height: 1.1;
+  }
+  .stat .num.green{ color: var(--green); }
+  .stat .num.amber{ color: var(--amber); }
+  .stat .lbl{
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-top: 4px;
+    line-height: 1.3;
+  }
+  .stat .src{
+    font-size: 9px;
+    color: #5d7268;
+    margin-top: 6px;
+    display:block;
+  }
+
+  /* BAR CHART */
+  .bars{
+    margin-top: 18px;
+  }
+  .bar-row{
+    margin-bottom: 12px;
+  }
+  .bar-row .bar-label{
+    display:flex;
+    justify-content: space-between;
+    font-size: 12.5px;
+    margin-bottom: 4px;
+  }
+  .bar-row .bar-label .pct{ font-weight:700; color: var(--text); }
+  .bar-track{
+    height: 10px;
+    background: var(--bg2);
+    border-radius: 6px;
+    overflow:hidden;
+    border: 1px solid var(--line);
+  }
+  .bar-fill{
+    height: 100%;
+    border-radius: 6px;
+    background: linear-gradient(90deg, var(--green-dim), var(--green));
+    width: 0%;
+    transition: width 1.2s ease;
+  }
+  .bar-fill.red{ background: linear-gradient(90deg, #6e2a20, var(--red)); }
+  .bar-fill.amber{ background: linear-gradient(90deg, #6e5320, var(--amber)); }
+
+  /* CALL TO ACTION */
+  .cta{
+    background: var(--card);
+    border: 1px solid var(--green-dim);
+    border-radius: 14px;
+    padding: 20px 16px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .cta h3{ font-size: 16px; margin-bottom: 8px; }
+  .cta p{ font-size: 13px; color: var(--text-dim); line-height:1.5; margin-bottom: 14px; }
+  .cta-buttons{
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .btn{
+    display:block;
+    text-decoration:none;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align:center;
+    border: 1px solid var(--line);
+    color: var(--text);
+    transition: transform 0.15s ease;
+  }
+  .btn:active{ transform: scale(0.97); }
+  .btn.primary{
+    background: var(--green);
+    border-color: var(--green);
+    color: #06120a;
+  }
+  .btn.outline{
+    background: transparent;
+  }
+
+  /* SOURCES */
+  .sources{
+    font-size: 11.5px;
+    color: #6f857a;
+    line-height: 1.6;
+    border-top: 1px solid var(--line);
+    padding-top: 14px;
+    margin-top: 8px;
+  }
+  .sources strong{ color: var(--text-dim); }
+
+  footer{
+    text-align:center;
+    font-size: 10.5px;
+    color: #50645a;
+    padding: 24px 20px 32px;
+    border-top: 1px solid var(--line);
+    line-height: 1.6;
+  }
+
+  .impact-banner{
+    margin: 6px 0 18px;
+    background: repeating-linear-gradient(45deg, #1c2a20 0 14px, #142019 14px 28px);
+    border: 1px dashed var(--amber);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 12.5px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .impact-banner b{ color: var(--amber); }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="tag">Colombia Sin Venda · Línea de tiempo</span>
+  <h1>Esto que ves en el video <span>no debería estar pasando.</span></h1>
+  <p>Un niño en uniforme camuflado, en medio de la selva, hablando frente a una cámara, no es una imagen del pasado. Es un hecho que sigue ocurriendo hoy, documentado por el Estado colombiano. Aquí va la cronología real.</p>
+  <div class="clock" id="clock">Cargando hora de Colombia…</div>
+</div>
+
+<!-- 1. QUÉ MUESTRA EL VIDEO -->
+<div class="section">
+  <h2><span class="dot" style="background:var(--red); box-shadow:0 0 8px var(--red);"></span>Lo que muestra el video</h2>
+  <p class="sub">Contexto de lo grabado, sin dramatizar más de lo que ya es.</p>
+
+  <div class="videocard">
+    <h3>① La escena</h3>
+    <p>Un niño, con apariencia de no más de 10 a 12 años, vestido con uniforme camuflado completo —gorra, chaqueta y pantalón de fatiga— está sentado en plena vegetación selvática, hablando frente a una cámara como si diera un mensaje o testimonio.</p>
+    <p>El encuadre del video lleva un texto superior alusivo a <b>"menores en Colombia"</b> y, en la parte inferior, una composición con tres figuras públicas/políticas bajo la palabra <b>"ORGANIZACIÓN"</b>, sugiriendo una denuncia sobre responsabilidad política frente al fenómeno.</p>
+  </div>
+
+  <div class="videocard" style="border-left-color: var(--amber);">
+    <h3 style="color:var(--amber);">② Por qué es grave, independientemente de quién lo publicó</h3>
+    <p>Vestir a un menor con uniforme de combate y exhibirlo hablando para una organización armada cumple, por definición, los criterios que el derecho internacional humanitario llama <b>reclutamiento y utilización de niños, niñas y adolescentes (NNA) en conflicto armado</b>.</p>
+    <p>Esto aplica sin importar el grupo, la región o el discurso que acompañe al video: el Protocolo Facultativo de la Convención sobre los Derechos del Niño y el Estatuto de Roma lo consideran un crimen.</p>
+  </div>
+</div>
+
+<!-- 2. LÍNEA DE TIEMPO -->
+<div class="section">
+  <h2><span class="dot"></span>Cronología del reclutamiento de menores en Colombia</h2>
+  <p class="sub">De la normativa que lo prohíbe a las cifras más recientes confirmadas oficialmente.</p>
+
+  <div class="timeline" id="timeline">
+
+    <div class="tl-item">
+      <div class="tl-date">2000</div>
+      <div class="tl-title">Protocolo Facultativo de la ONU</div>
+      <div class="tl-body">Colombia se compromete internacionalmente a no usar menores de 18 años en hostilidades. El reclutamiento infantil queda formalmente catalogado como infracción grave al DIH.</div>
+      <div class="tl-tag">Marco legal</div>
+    </div>
+
+    <div class="tl-item amber">
+      <div class="tl-date">2016 – Acuerdo de Paz con FARC</div>
+      <div class="tl-title">Desmovilización, pero no el fin del fenómeno</div>
+      <div class="tl-body">Tras la firma del acuerdo, miles de excombatientes salen de las filas, pero estructuras disidentes y otros grupos armados (ELN, Clan del Golfo / EGC, EMC) ocupan los territorios dejados y continúan reclutando.</div>
+      <div class="tl-tag">Punto de quiebre</div>
+    </div>
+
+    <div class="tl-item danger">
+      <div class="tl-date">2024</div>
+      <div class="tl-title">651 casos registrados</div>
+      <div class="tl-body">La Defensoría del Pueblo actualizó la cifra de 2024 de 624 a <b>651 casos</b> de reclutamiento forzado, el año más alto del periodo reciente.</div>
+      <div class="tl-tag">Defensoría del Pueblo</div>
+    </div>
+
+    <div class="tl-item danger">
+      <div class="tl-date">2025</div>
+      <div class="tl-title">386 niñas, niños y adolescentes reclutados</div>
+      <div class="tl-body">Entre enero y diciembre de 2025 se documentaron <b>386 casos</b>. El 58% fueron niños/adolescentes hombres y el 42% niñas/adolescentes mujeres. El 52% de las víctimas pertenecía a comunidades indígenas. Cauca fue el departamento más golpeado, con más de 170 casos. El Estado Mayor Central (disidencia de alias "Iván Mordisco") concentró el 42-47% de los casos, seguido por el ELN y el Clan del Golfo.</div>
+      <div class="tl-tag">Defensoría del Pueblo — Ene 2026</div>
+    </div>
+
+    <div class="tl-item amber">
+      <div class="tl-date">Ene – Mar 2026</div>
+      <div class="tl-title">19 casos nuevos en el primer trimestre</div>
+      <div class="tl-body">El reclutamiento no se detuvo con el cambio de año. La Defensoría reportó nuevos episodios en Cauca, Boyacá, Magdalena, Putumayo, Tolima, Valle del Cauca y Guainía, y pidió a los candidatos presidenciales incluir estrategias de prevención en sus planes de gobierno.</div>
+      <div class="tl-tag">Infobae — Abr 2026</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date">Hoy — Junio 2026</div>
+      <div class="tl-title">El video que estás viendo</div>
+      <div class="tl-body">Mientras el país discute la segunda vuelta presidencial del 21 de junio, contenidos como este siguen circulando en redes. La pregunta no es solo quién lo subió, sino: ¿qué va a cambiar para que un niño no vuelva a aparecer en un uniforme de guerra?</div>
+      <div class="tl-tag">Tu turno</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 3. CIFRAS CLAVE -->
+<div class="section">
+  <h2><span class="dot" style="background:var(--amber); box-shadow:0 0 8px var(--amber);"></span>Las cifras detrás de la imagen</h2>
+  <p class="sub">Datos oficiales de la Defensoría del Pueblo (2025–2026).</p>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="num">386</div>
+      <div class="lbl">menores reclutados en 2025</div>
+      <span class="src">Defensoría del Pueblo</span>
+    </div>
+    <div class="stat">
+      <div class="num amber">651</div>
+      <div class="lbl">casos en 2024 (cifra ajustada)</div>
+      <span class="src">Defensoría del Pueblo</span>
+    </div>
+    <div class="stat">
+      <div class="num green">19</div>
+      <div class="lbl">nuevos casos, ene–mar 2026</div>
+      <span class="src">Infobae / Defensoría</span>
+    </div>
+    <div class="stat">
+      <div class="num">52%</div>
+      <div class="lbl">víctimas de comunidades indígenas</div>
+      <span class="src">Defensoría del Pueblo</span>
+    </div>
+  </div>
+
+  <div class="bars">
+    <div class="bar-row">
+      <div class="bar-label"><span>Estado Mayor Central (disidencias)</span><span class="pct">42-47%</span></div>
+      <div class="bar-track"><div class="bar-fill red" data-w="45"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label"><span>ELN</span><span class="pct">~12%</span></div>
+      <div class="bar-track"><div class="bar-fill amber" data-w="12"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label"><span>Clan del Golfo / EGC</span><span class="pct">~8%</span></div>
+      <div class="bar-track"><div class="bar-fill" data-w="8"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label"><span>Otros grupos / sin identificar</span><span class="pct">~35%</span></div>
+      <div class="bar-track"><div class="bar-fill" data-w="35"></div></div>
+    </div>
+  </div>
+
+  <div class="impact-banner">
+    <b>Subregistro:</b> la propia Defensoría advierte que estas cifras están por debajo de la realidad. El miedo de las familias a denunciar y el control territorial de los grupos armados hacen que muchos casos nunca se reporten.
+  </div>
+</div>
+
+<!-- 4. QUÉ HACER -->
+<div class="section">
+  <h2><span class="dot"></span>¿Qué puedes hacer con esta información?</h2>
+  <p class="sub">No se trata de indignarte y pasar al siguiente video.</p>
+
+  <div class="cta">
+    <h3>No comparta sin contexto</h3>
+    <p>Compartir el video "tal cual", con su música y su título, puede revictimizar al menor que aparece y darle alcance a contenido propagandístico de un grupo armado. Si lo compartes, hazlo con contexto como este.</p>
+    <div class="cta-buttons">
+      <a class="btn primary" href="https://www.icbf.gov.co/" target="_blank" rel="noopener">Reportar al ICBF (Línea 141)</a>
+      <a class="btn outline" href="https://wa.me/?text=Mira%20esta%20cronolog%C3%ADa%20sobre%20el%20reclutamiento%20de%20menores%20en%20Colombia%20%E2%80%94%20esto%20no%20deber%C3%ADa%20estar%20pasando." target="_blank" rel="noopener">Compartir esta cronología</a>
+    </div>
+  </div>
+</div>
+
+<!-- FUENTES -->
+<div class="section">
+  <div class="sources">
+    <strong>Fuentes consultadas (junio 2026):</strong><br/>
+    Defensoría del Pueblo de Colombia, comunicado oficial sobre reclutamiento forzado 2025 (defensoria.gov.co) ·
+    Pulzo, "Grupos armados reclutan a 257 menores en 2025, Cauca es la región más afectada" (ene 2026) ·
+    LaFM, "Más de 380 casos de reclutamiento de niños y niñas en Colombia durante el 2025" ·
+    Infobae, "Preocupante panorama del reclutamiento infantil en Colombia: 19 casos en el primer trimestre de 2026" (abr 2026) ·
+    International Crisis Group, "Menores en el frente de batalla: detener el reclutamiento infantil en Colombia" (feb 2026).
+  </div>
+</div>
+
+<footer>
+  Desarrollada por Vibras Positivas HM — Derechos de Autor Reservados<br/>
+  Proyecto Colombia Sin Venda · Contenido informativo y educativo, sin afiliación a ningún grupo armado, partido o candidato.
+</footer>
+
+<script>
+  // Reloj Colombia (UTC-5)
+  function updateClock(){
+    const now = new Date();
+    const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+    const co = new Date(utc - 5 * 3600000);
+    const days = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+    const months = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+    const hh = co.getHours().toString().padStart(2,'0');
+    const mm = co.getMinutes().toString().padStart(2,'0');
+    const ss = co.getSeconds().toString().padStart(2,'0');
+    document.getElementById('clock').textContent =
+      `🇨🇴 ${days[co.getDay()]} ${co.getDate()} ${months[co.getMonth()]} ${co.getFullYear()} — ${hh}:${mm}:${ss} (Colombia)`;
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  // Animar barras al hacer scroll
+  const bars = document.querySelectorAll('.bar-fill');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const el = entry.target;
+        el.style.width = el.dataset.w + '%';
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.4 });
+  bars.forEach(b => observer.observe(b));
+
+  // Service worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(()=>{});
+    });
+  }
+</script>
+</body>
+</html>
